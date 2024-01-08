@@ -1,0 +1,16 @@
+/*Import mixins and variables*/
+@import "./Abstract/mixins";
+@import "./Abstract/fonts";
+@import "./Abstract/color";
+@import "./Abstract/general";
+@import "./Abstract/icomoon";
+
+/*Import pages and components*/
+@import "./components/navbar";
+@import "./components/main-card";
+@import "./components/collapse";
+@import "./components/profile-info";
+@import "./components/qr-code";
+@import "./components/products-card";
+@import "./components/tabs";
+@import "./components/card"

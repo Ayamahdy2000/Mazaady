@@ -1,0 +1,118 @@
+.main-card {
+    background-color: $white;
+    padding: 24px;
+    border-radius: 21px;
+
+    header {
+        margin-bottom: 24px;
+    }
+
+
+    svg {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .main-card__img {
+        width: 100px;
+        height: 100px;
+        border-radius: 24px;
+        margin-bottom: 16px;
+    }
+
+    .main-card__title {
+        @include fontSize(24px, 18px);
+        font-family: 'Nunito-Bold';
+        text-transform: capitalize;
+        color: $lightBlack;
+
+    }
+
+    .main-card__text {
+        font-size: 14px;
+
+        color: #4F4F4F;
+        margin-bottom: 24px;
+
+    }
+
+    .info-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 17px;
+        margin-bottom: 24px;
+
+
+    }
+
+    .info-card {
+        background-color: #FFF5E9;
+        color: $secondry;
+        display: flex;
+        border-radius: 18px;
+        font-size: 12px;
+        padding: 12px 17px 12px 8px;
+        align-items: center;
+
+        .info-card__number {
+            font-family: 'Nunito-Bold';
+            font-size: 14px;
+
+            span {
+                color: $grayText;
+                font-size: 10px;
+                font-family: 'Nunito-Regular';
+            }
+        }
+
+        svg {
+            stroke: $secondry;
+            margin-right: 6px;
+            width: 24px;
+            height: 24px;
+        }
+
+        p {
+            margin-bottom: 0px;
+
+        }
+    }
+
+
+}
+
+@media(max-width:640px) {
+    .main-card {
+        padding: 16px;
+        border-radius: 18px;
+
+        .main-card__img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 8px;
+            border-radius: 20px;
+
+        }
+
+        .main-card__text {
+            margin-bottom: 16px;
+        }
+
+        .info-cards {
+            gap: 6px;
+            margin-bottom: 16px;
+
+            .info-card {
+                padding: 12px 12px 12px 7px;
+
+                svg {
+                    width: 22px;
+                }
+            }
+
+
+        }
+
+
+    }
+}

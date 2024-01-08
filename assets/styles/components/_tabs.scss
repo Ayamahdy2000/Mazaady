@@ -1,0 +1,33 @@
+.tabs {
+    list-style: none;
+
+    .tabs__item {
+        border: 1px solid #E0E0E0;
+        border-radius: 14px;
+        padding: 8px ;
+        text-align: center;
+        width: 108px;
+        color: $grayText;
+        margin-left: 10px;
+        @include fontSize(14px,14px);
+        &:first-child{
+            margin-left: 0;
+        }
+
+        &.tabs__item--active {
+            font-family: 'Nunito-Bold';
+            border-color: $secondry;
+            color: $secondry;
+        }
+    }
+}
+@media (max-width:640px){
+    .tabs {
+    
+        .tabs__item {
+            padding: 8px;
+            
+            width: 97px;
+        }
+    } 
+}

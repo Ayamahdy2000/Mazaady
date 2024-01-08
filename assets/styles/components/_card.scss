@@ -1,0 +1,203 @@
+.card {
+    margin-bottom: 24px;
+    padding-right: 34px;
+
+    .d-flex {
+        display: grid;
+        grid-template-columns: 145px 1fr;
+        gap: 10px;
+    }
+
+    .card__img {
+        width: 100%;
+        border-radius: 24px;
+        position: relative;
+        height: max-content;
+
+        .card__heart {
+            display: none;
+        }
+
+        img {
+            height: 127px;
+            border-radius: 24px;
+        }
+
+        p {
+            border-radius: 33.8px 0px 33.8px 0px;
+            background-color: $primary;
+            padding: 11px 22px;
+            color: $white;
+            @include fontSize(12px, 8px);
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            &.sale{
+                background-color: $secondry;
+            }
+        }
+    }
+
+    .card__content {
+
+        .card__title {
+            max-width: 83%;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            // white-space: nowrap;
+            text-transform: capitalize;
+            @include fontSize(18px, 12px);
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+        }
+
+        .card__text {
+            @include fontSize(18px, 12px);
+            color: $grayText;
+            margin-top: 8px;
+
+            span {
+                @include fontSize(20px, 12px);
+                color: $lightBlack;
+                font-family: 'Nunito-Bold';
+
+
+
+                &.card__days {
+                    background: #FFF5E9;
+                    border-radius: 24px;
+                    @include fontSize(20px, 12px);
+                    font-family: 'Nunito-Bold';
+                    color: $secondry;
+                    width: 105px;
+                    padding: 6px 13px;
+                    height: max-content;
+                    text-align: center;
+
+                    &:first-child {
+                        margin-left: 0.5rem
+                    }
+
+
+                    span {
+                        @include fontSize(14px, 8px);
+                        font-family: 'Nunito-Regular';
+                        color: $secondry;
+                        text-transform: capitalize;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .card__heart {
+        stroke: $lightBlack;
+        cursor: pointer;
+        width: 24px;
+
+        &.active {
+            fill: $primary;
+            stroke: $primary;
+        }
+    }
+}
+
+@media (max-width:640px) {
+    .card {
+        margin-bottom: 24px;
+
+        .d-flex {
+            display: grid;
+            grid-template-columns: 89px 1fr;
+            gap: 8px;
+        }
+
+        .card__img {
+            border-radius: 15px;
+            position: relative;
+            height: max-content;
+
+            .card__heart {
+
+                cursor: pointer;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 4px;
+                background-color: $white;
+                left: 4px;
+
+                &.active {
+
+                    svg {
+                        fill: $primary;
+                        stroke: $primary;
+                    }
+                }
+
+                svg {
+                    width: 14px;
+                    stroke: $lightBlack;
+                }
+            }
+
+
+            img {
+                height: 72px;
+                border-radius: 15px;
+            }
+
+            p {
+                border-radius: 15px 0px 15px 0px;
+                padding: 8px 12px 8px 9px;
+            }
+        }
+
+        .card__content {
+            max-width: 100%;
+
+            .card__title {
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                line-clamp: 2;
+                width: unset;
+                display: -webkit-box;
+                white-space: wrap;
+
+            }
+
+            .card__text {
+
+                span {
+                    &.card__days {
+                        margin-top: 8px;
+                        border-radius: 24px;
+                        width: 56px;
+                        padding: 6px 5px;
+
+                        &:first-child {
+                            margin-left: 0rem
+                        }
+
+                        span {
+                            font-family: 'Nunito-Bold';
+
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .card__heart {
+            display: none;
+        }
+    }
+}

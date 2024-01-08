@@ -1,0 +1,38 @@
+.profile-info {
+    .btn {
+        font-size: 16px;
+    }
+
+    .main-card {
+        &.qr-sec {
+            .info-card {
+                padding: 17px 33px 17px 16px;
+
+                .info-card__number {
+                    font-family: 'Nunito-Regular';
+                }
+
+                svg {
+                    margin-right: 8px;
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:640px){
+    .profile-info {
+        .btn {
+            font-size: 16px;
+        }
+    
+        .main-card {
+            &.qr-sec {
+                .info-card {
+                    padding: 13px 24px 13px 13px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,239 @@
+.navbar {
+    background-color: $white;
+    margin-bottom: 50px;
+    .navbar__brand{
+        max-width: 108px;
+        height: 43px;
+    }
+    svg{
+        width: 24px;
+        height: 24px;
+    }
+    .navbar__profile{
+     
+        button{
+            width: 40px;
+            height: 40px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .navbar__items {
+
+
+        .navbar__item {
+            color: #999;
+            @include font-size(18px, 16px, 14px, 18px);
+            height: 100%;
+            align-items: center;
+            display: flex;
+
+            &:first-child {
+                margin: 0;
+                margin-right: 40px;
+            }
+
+            margin: 0 40px 0 0;
+
+            &.navbar__item--active {
+                color: $primary;
+                font-family: 'Nunito-SemiBold';
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 80%;
+                    border-top-right-radius: 5px;
+                    border-top-left-radius: 5px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    height: 5px;
+                    background-color: $primary;
+
+                }
+            }
+        }
+    }
+
+    .btn {
+        padding: 11px 15px;
+    }
+
+    .navbar__icon--border {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            content: "";
+        }
+    }
+
+    .navbar__icon__left {
+        padding: 0 24px;
+
+        &.navbar__icon--border {
+            &::after {
+                background-color: $secondry;
+            }
+        }
+    }
+
+    .navbar__icon__right {
+        margin-left: 32px;
+        padding-right: 12px;
+
+        &:last-child {
+            margin-left: 0px;
+            padding-left: 12px;
+            padding-right: 0;
+        }
+
+        &.navbar__icon--border {
+            &::after {
+                background-color: $gray;
+            }
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    .navbar {
+        .btn {
+            padding: 11px 8px;
+        }
+    
+        .navbar__items {
+
+
+            .navbar__item {
+                margin: 0 10px 0 0;
+
+                &:first-child {
+                    margin: 0;
+                    margin-right: 10px;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .navbar__icon__left {
+            padding: 0 15px;
+        }
+
+        .navbar__icon__right {
+            margin-left: 24px;
+            padding-right: 8px;
+
+            &:last-child {
+                padding-left: 8px;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .navbar {
+        .navbar__items {
+
+
+            .navbar__item {
+                margin: 0 8px 0 0;
+
+                &:first-child {
+                    margin: 0;
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        .navbar__icon__left {
+            padding: 0 10px;
+        }
+
+        .navbar__icon__right {
+            margin-left: 12px;
+            padding-right: 4px;
+
+            &:last-child {
+                padding-left: 4px;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar {
+        margin-bottom: 16px;
+        .navbar__brand{
+            max-width: 101px;
+            height: 32px;
+            margin-left: 32px;
+        }
+        .navbar__profile{
+     padding: 0 !important;
+            button{
+                width: 24px;
+                height: 24px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .navbar__bars{
+            width: 24px;
+            height: 24px;
+            padding: 0;
+            svg{
+                width: 24px;
+                height: 24px; 
+            }
+        }
+
+        .navbar__items {
+            .navbar__item {
+                margin-bottom: 16px !important;
+                display: block;
+
+                &.navbar__item--active {
+                    color: $primary;
+
+                    &::after {
+                        display: none;
+
+                    }
+                }
+            }
+        }
+
+        .navbar__icon__left {
+            padding: 0 15px;
+
+            &:first-child {
+                padding-right: 0;
+            }
+
+            &.navbar__icon--border {
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        .navbar__icon__right {
+            margin-left: 0px;
+        }
+    }
+}

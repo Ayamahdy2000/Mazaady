@@ -1,0 +1,19 @@
+.products-card {
+    header {
+        .btn {
+            display: block;
+        }
+    }
+}
+
+@media (max-width:640px) {
+    .products-card {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        header {
+            .btn {
+                display: none;
+            }
+        }
+    }
+}
